@@ -1,0 +1,16 @@
+@import "../common/lib/weui.wxss";
+.imgcontainer{
+  margin-top:0rpx; 
+}
+.showcanvas{
+  padding-top:0rpx; 
+  border: 1px solid red;  
+}
+.canvasbody{
+  margin-left:auto;
+  margin-right:auto;
+}
+.weui-uploader__input{
+  margin-left:auto;
+  margin-right:auto;
+}
