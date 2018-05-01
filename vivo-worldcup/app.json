@@ -1,25 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/image/image",
-    "pages/logs/logs",
-    "pages/index/index"
+    "pages/logs/logs"
   ],
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "image/index.png",
-        "selectedIconPath": "image/index.png"
-      },
-      {
-        "pagePath": "pages/image/image",
-        "text": "拍照页面",
-        "iconPath": "image/tabbar.png",
-        "selectedIconPath": "image/tabbar.png"
-      }
-    ]
-  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

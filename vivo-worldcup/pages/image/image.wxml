@@ -2,7 +2,12 @@
   <view wx:if="{{imageList.length>0}}" class="showcanvas">
        <canvas  class="canvasbody" canvas-id="firstCanvas" style="width:400px; height: 500px;border: 1px solid;"></canvas>    
   </view>  
-  <view class="weui-uploader__input-box">
-        <view class="weui-uploader__input" bindtap="chooseImage"></view>
-  </view>   
+
+
+  <view class="chooseimg" bindtap="chooseImage">
+  <image class="plus"  src="../../image/plus.png"></image>
+  </view>
+ 
+
+
 </view>
