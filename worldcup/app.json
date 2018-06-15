@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/worldcup/index",
+    "pages/group/group",
+    "pages/knockout/knockout",
+    "pages/image/image",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/worldcup/index",
+        "text": "赛程",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index.png"
+      },
+      {
+        "pagePath": "pages/group/group",
+        "text": "冠军之路",
+        "iconPath": "image/tabbar.png",
+        "selectedIconPath": "image/tabbar.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "俄罗斯世界杯赛程",
+    "navigationBarTextStyle": "black"
+  }
+}

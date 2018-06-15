@@ -1,0 +1,64 @@
+/**index.wxss**/
+.container{
+  margin-top:0rpx;
+  padding-top:0rpx;
+}
+.rowcontainer{
+  display: flex;
+}
+.leftgroup{
+  margin-left:40rpx;
+}
+.groupname{
+  width:320rpx;
+  height:80rpx;
+  background-color:#A9A9A9;
+  margin-top:20rpx;
+  
+}
+.innergroupname{
+  display: inline-block;
+  vertical-align: middle;
+  padding-left:20rpx;
+}
+.groupteam{
+  width:320rpx;
+  height:80rpx; 
+  background-color:  #708090;
+  border-bottom:solid 2rpx 	#696969
+}
+.groupteamgreen{
+  width:320rpx;
+  height:80rpx; 
+  background-color:green;
+  border-bottom:solid 2rpx 	#696969
+}
+.team-avatar{
+  height:34rpx;
+  width:50rpx;
+  border:2rpx solid #F2F2F2; 
+  vertical-align: middle;
+  margin-top:15rpx;
+  margin-left:15rpx;
+}
+.team-name{
+  display:inline-block;
+  vertical-align: middle;
+  font-size:25rpx;
+  margin-left:5rpx;
+  padding-top:19rpx;  
+}
+.rightgroup{
+  margin:0 50rpx 0 30rpx;
+  
+}
+.chooseflag{ 
+  font-size:25rpx;
+  color:white;
+  float: right;
+  padding-top:20rpx;
+  padding-right:20rpx; 
+}
+.knockbutton{
+  margin-top:50rpx;
+}

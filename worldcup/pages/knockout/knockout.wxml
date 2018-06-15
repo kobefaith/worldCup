@@ -1,0 +1,133 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="rowcontainer" style="flex-direction:row;">
+    <view class="flex-item">
+      <view wx:for="{{stage1}}" class="stage1wrap" wx:for-item="stage1item" wx:for-index="idx" wx:key="idx">
+        <view class="stage1top">
+          <view class="stage1topleft">
+            <view class="stage1flag" bindtap="choseTheWiner" data-flag="{{chooseobj[stage1item[1].team][stage1item[1].order]}}" data-index="{{idx}}"
+              data-stage="{{1}}">
+              <text class="stage1groupname">{{stage1item[1].team}}{{stage1item[1].order}}</text>
+              <image class="stage1flagavatar" src="{{flagobj[chooseobj[stage1item[1].team][stage1item[1].order]].flag}}"></image>
+            </view>
+            <view class="stage1name">{{chooseobj[stage1item[1].team][stage1item[1].order]}}</view>
+          </view>
+          <view class="stage1topright"></view>
+          <view class="stage1topright-line"></view>
+        </view>
+        <view class="stage1bottom">
+          <view class="stage1bottomleft">
+            <view class="stage1flag" bindtap="choseTheWiner" data-flag="{{chooseobj[stage1item[2].team][stage1item[2].order]}}" data-index="{{idx}}"
+              data-stage="{{1}}">
+              <text class="stage1groupname">{{stage1item[2].team}}{{stage1item[2].order}}</text>
+              <image class="stage1flagavatar" src="{{flagobj[chooseobj[stage1item[2].team][stage1item[2].order]].flag}}"></image>
+            </view>
+            <view class="stage1name">{{chooseobj[stage1item[2].team][stage1item[2].order]}}</view>
+          </view>
+          <view class="stage1bottomright"></view>
+        </view>
+      </view>
+    </view>
+    <view class="flex-item">
+      <view wx:for="{{stage2}}" class="stage2wrap" wx:for-item="stage2item" wx:for-index="idx" wx:key="idx">
+        <view class="stage2top">
+          <image class="stage2flagavatar" src="{{flagobj[stage2item[1]].flag}}" bindtap="choseTheWiner" data-flag="{{stage2item[1]}}"
+            data-index="{{idx}}" data-stage="{{2}}"></image>
+          <view class="stage2topright"> </view>
+          <view class="stage2topright-line"></view>
+        </view>
+        <view class="stage2bottom">
+          <image class="stage2bottflagavatar" src="{{flagobj[stage2item[2]].flag}}" bindtap="choseTheWiner" data-flag="{{stage2item[2]}}"
+            data-index="{{idx}}" data-stage="{{2}}"></image>
+          <view class="stage2bottomright"> </view>
+        </view>
+      </view>
+    </view>
+    <view class="flex-item">
+      <view wx:for="{{stage3}}" class="stage3wrap" wx:for-item="stage3item" wx:for-index="idx" wx:key="idx">
+        <view class="stage3top">
+          <image class="stage3flagavatar" src="{{flagobj[stage3item[1]].flag}}" bindtap="choseTheWiner" data-flag="{{stage3item[1]}}"
+            data-index="{{idx}}" data-stage="{{3}}"></image>
+          <view class="stage3topline"></view>
+        </view>
+        <view class="stage3bottom">
+          <view class="stage3bottomline"></view>
+          <image class="stage3bottflagavatar" src="{{flagobj[stage3item[2]].flag}}" bindtap="choseTheWiner" data-flag="{{stage3item[2]}}"
+            data-index="{{idx}}" data-stage="{{3}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="flex-item">
+      <image class="champion" src="{{flagobj[champion].flag}}"></image>
+      <view class="championname">
+        <text wx:if="{{champion}}">{{champion}}</text>
+      </view>
+      <view class="stage4">
+        <image class="stage4leftflag" src="{{flagobj[stage4[0][1]].flag}}" bindtap="choseTheWiner" data-flag="{{stage4[0][1]}}" data-index="0"
+          data-stage="{{4}}"></image>
+        <view class="stage4left"></view>
+        <view class="stage4right"></view>
+        <image class="stage4rightflag" src="{{flagobj[stage5[0][1]].flag}}" bindtap="choseTheWiner" data-flag="{{stage5[0][1]}}"
+          data-index="0" data-stage="{{5}}"></image>
+      </view>
+      <image class="worldcupimg" src="{{worldcup}}"></image>
+    </view>
+    <view class="flex-item">
+      <view wx:for="{{stage6}}" class="stage3wrap" wx:for-item="stage6item" wx:for-index="idx" wx:key="idx">
+        <view class="stage3top">
+          <image class="stage3flagavatar" src="{{flagobj[stage6item[1]].flag}}" bindtap="choseTheWiner" data-flag="{{stage6item[1]}}"
+            data-index="{{idx}}" data-stage="{{6}}"></image>
+          <view class="stage6topline"></view>
+        </view>
+        <view class="stage3bottom">
+          <view class="stage6bottomline"></view>
+          <image class="stage3bottflagavatar" src="{{flagobj[stage6item[2]].flag}}" bindtap="choseTheWiner" data-flag="{{stage6item[2]}}"
+            data-index="{{idx}}" data-stage="{{6}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="flex-item">
+      <view wx:for="{{stage7}}" class="stage7wrap" wx:for-item="stage7item" wx:for-index="idx" wx:key="idx">
+        <view class="stage2top">
+          <view class="stage7topleft-line"></view>
+          <view class="stage7topleft"> </view>
+          <image class="stage2flagavatar" src="{{flagobj[stage7item[1]].flag}}" bindtap="choseTheWiner" data-flag="{{stage7item[1]}}"
+            data-index="{{idx}}" data-stage="{{7}}"></image>
+        </view>
+        <view class="stage2bottom">
+          <view class="stage7bottomleft"> </view>
+          <image class="stage2bottflagavatar" src="{{flagobj[stage7item[2]].flag}}" bindtap="choseTheWiner" data-flag="{{stage7item[2]}}"
+            data-index="{{idx}}" data-stage="{{7}}"></image>
+        </view>
+      </view>
+    </view>
+    <view class="flex-item stage8">
+      <view wx:for="{{stage8}}" class="stage8wrap" wx:for-item="stage1item" wx:for-index="idx" wx:key="idx">
+        <view class="stage8top">
+          <view class="stage1topright-line"></view>
+          <view class="stage8topright"></view>
+          <view class="stage1topleft">
+            <view class="stage8flag" bindtap="choseTheWiner" data-flag="{{chooseobj[stage1item[1].team][stage1item[1].order]}}" data-index="{{idx}}"
+              data-stage="{{8}}">
+              <image class="stage1flagavatar" src="{{flagobj[chooseobj[stage1item[1].team][stage1item[1].order]].flag}}"></image>
+              <text class="stage1groupname">{{stage1item[1].team}}{{stage1item[1].order}}</text>
+            </view>
+            <view class="stage8name">{{chooseobj[stage1item[1].team][stage1item[1].order]}}</view>
+          </view>
+        </view>
+        <view class="stage8bottom">
+          <view class="stage8bottomright"></view>
+          <view class="stage1bottomleft">
+            <view class="stage8flag" bindtap="choseTheWiner" data-flag="{{chooseobj[stage1item[2].team][stage1item[2].order]}}" data-index="{{idx}}"
+              data-stage="{{8}}">
+              <image class="stage1flagavatar" src="{{flagobj[chooseobj[stage1item[2].team][stage1item[2].order]].flag}}"></image>
+              <text class="stage1groupname">{{stage1item[2].team}}{{stage1item[2].order}}</text>
+            </view>
+            <view class="stage8name">{{chooseobj[stage1item[2].team][stage1item[2].order]}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button type="primary" bindtap="bindViewTap">完成</button>
+</view>

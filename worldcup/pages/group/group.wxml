@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="rowcontainer" style="flex-direction:row;">
+    <view class="flex-item">
+      <view class="leftgroup" wx:for="{{['A','C','E','G']}}" wx:for-item="left" wx:for-index="idx" wx:key="idx">
+        <view class="groupname">
+          <text class="innergroupname">{{left}}组</text>
+        </view>
+        <view class="{{(chooseobj[left]['1'] === teamleft)||(chooseobj[left]['2'] === teamleft)?'groupteamgreen':'groupteam'}}" wx:for="{{groupobj[left]}}"
+          wx:for-item="teamleft" data-group="{{left}}" data-team="{{teamleft}}" bindtap="choseTeam" wx:for-index="idx" wx:key="idx">
+          <image class="team-avatar" src="{{flagobj[teamleft].flag}}"></image>
+          <text class="team-name">{{teamleft}}</text>
+          <text class="chooseflag" wx:if="{{chooseobj[left]['1'] === teamleft}}">{{left}}1</text>
+          <text class="chooseflag" wx:elif="{{chooseobj[left]['2'] === teamleft}}">{{left}}2</text>
+        </view>
+      </view>
+    </view>
+    <view class="flex-item">
+      <view class="rightgroup" wx:for="{{['B','D','F','H']}}" wx:for-item="right" wx:for-index="idx" wx:key="idx">
+        <view class="groupname">
+          <text class="innergroupname">{{right}}组</text>
+        </view>
+        <view class="{{(chooseobj[right]['1'] === teamleft)||(chooseobj[right]['2'] === teamleft)?'groupteamgreen':'groupteam'}}"
+          wx:for="{{groupobj[right]}}" wx:for-item="teamleft" data-group="{{right}}" data-team="{{teamleft}}" bindtap="choseTeam"
+          wx:for-index="idx" wx:key="idx">
+          <image class="team-avatar" src="{{flagobj[teamleft].flag}}"></image>
+          <text class="team-name">{{teamleft}}</text>
+          <text class="chooseflag" wx:if="{{chooseobj[right]['1'] === teamleft}}">{{right}}1</text>
+          <text class="chooseflag" wx:elif="{{chooseobj[right]['2'] === teamleft}}">{{right}}2</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button type="primary" class="knockbutton" disabled="{{complete}}" bindtap="bindViewTap">进入淘汰赛</button>
+</view>

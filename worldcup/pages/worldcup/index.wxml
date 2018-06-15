@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="match-item" wx:for="{{datearr}}" wx:for-index="idx" wx:for-item="datekey" wx:key="idx">
+    <view class="match-date">{{dateobj[datekey]}}</view>
+    <view class="match-content" style="flex-direction:row;" wx:for="{{matcharr[datekey]}}" wx:for-index="idx" wx:key="idx">
+      <view class="flex-item match-starttime">{{item.starttime}}</view>
+      <view class="flex-item">
+        <view>
+          <image class="match-avatar" src="{{flagobj[item.hostname].flag}}"></image>
+          <text class="match-name">{{item.hostname}}</text>
+        </view>
+
+        <view>
+          <image class="match-avatar" src="{{flagobj[item.guestname].flag}}"></image>
+          <text class="match-name">{{item.guestname}}</text>
+        </view>
+      </view>
+      <view class="flex-item">
+      </view>
+    </view>
+  </view>
+  <!--  <button type="primary" bindtap="bindViewTap">开启冠军之路</button> -->
+</view>

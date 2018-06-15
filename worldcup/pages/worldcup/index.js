@@ -1,5 +1,20 @@
+import { matchlist, flagobj, worldcup } from "./matchlist";
+
 //index.js
 //获取应用实例
+let convertDate = (datestr) => {
+  const month = (datestr.slice(4, 5) === '0' ? datestr.slice(5, 6) : datestr.slice(4, 6)) + '月';
+  const day = (datestr.slice(6, -1) === '0' ? datestr.slice(-1) : datestr.slice(6)) + '号';
+  return month + day;
+};
+let formatDate = function() {
+  const obj1 = {};
+  Object.keys(matchlist).forEach(item => {
+    obj1[ item ] = convertDate(item);
+  });
+  return obj1;
+};
+const dateobj1 = formatDate();
 const app = getApp()
 
 Page({
@@ -7,12 +22,31 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    datearr: Object.keys(matchlist),
+    matcharr: matchlist,
+    dateobj: dateobj1,
+    flagobj: flagobj,
+
   },
+  onShareAppMessage: function(res) {
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '世界杯赛程',
+      path: 'pages/worldcup/index'
+    }
+  },
+
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+    // wx.navigateTo({
+    //   url: '../group/group?test=123'
+    // })
+    wx.switchTab({
+      url: '../group/group',
     })
   },
   onLoad: function() {
@@ -52,8 +86,9 @@ Page({
     })
   },
   toImg: function() {
+    let a = 2;
     wx.navigateTo({
-      url: '../image/image'
+      url: '../image/image?type=' + a
     })
   },
 })

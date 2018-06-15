@@ -1,0 +1,66 @@
+/**index.wxss**/
+@import "../../utils/weui.wxss";
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+.container{
+  margin-top:0rpx;
+  padding-top:0rpx;
+}
+.match-item{
+  width:100%;
+}
+.match-date{
+  width:100%;
+  background-color: #F2F2F2;
+  text-align:left;
+  padding-left:30rpx;
+}
+.match-content{
+  border-bottom: 3rpx solid #F2F2F2;
+  display: flex;
+}
+.match-avatar{
+  height:40rpx;
+  width:60rpx;
+  border:2rpx solid #F2F2F2;
+  border-radius: 50%; 
+  padding-left:0rpx;
+  margin-top:15rpx;
+  margin-left:0rpx;
+}
+.match-starttime{
+  vertical-align: middle;
+  margin: 50rpx 30rpx; 
+}
+
+.match-name{
+   margin-left:  30rpx;
+   text-align: center;
+   display:inline-block;
+   vertical-align: top;
+   padding-top:15rpx;   
+}
+.jianbo{
+  margin-left:40rpx;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top:50rpx;
+}

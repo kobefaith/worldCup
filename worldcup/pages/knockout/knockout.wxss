@@ -1,0 +1,346 @@
+/**index.wxss**/
+@import "../../utils/weui.wxss";
+.container{
+  margin:0rpx;
+  width:100%;
+  height:100%;
+  padding:0rpx;
+
+}
+.rowcontainer{
+  display:flex;
+}
+.stage1wrap{
+  height:200rpx;
+  width:110rpx;
+}
+.stage1top{
+  display: flex;
+  padding-top:0rpx;
+  margin-top:0rpx;
+  margin-bottom:20rpx;
+}
+
+.stage1topleft{
+  margin-top:0rpx;
+  padding-top:0rpx; 
+  width:80rpx;
+}
+.stage1topright{
+  width:26rpx;
+  height:40rpx;
+  border-top:2rpx green solid;
+  border-right:2rpx green solid;
+  margin-top:15rpx;
+  margin-bottom:0rpx;
+}
+.stage1topright-line{
+  width:10rpx;
+  height:2rpx;
+  border-bottom:2rpx green solid;
+  margin-top:50rpx;
+}
+.stage1flag{
+  margin-top:0rpx;
+  padding-top:0rpx;
+  height:30rpx; 
+}
+.stage1groupname{
+  display:inline-block;
+  vertical-align: top;
+  font-size: 20rpx;
+}
+.stage1flagavatar{ 
+  vertical-align: top;
+  padding-top:0rpx;
+  margin-top:0rpx;
+  height:28rpx;
+  width:42rpx;
+  border:2rpx solid  #F2F2F2;
+}
+.stage1name{
+  padding:0rpx 20rpx;
+  margin:0rpx 0rpx;
+  font-size:20rpx;
+  width:100rpx;
+  height:30rpx;
+}
+.stage1bottom{
+  margin-top:0rpx;
+  padding-top:0rpx;
+  margin-bottom:20rpx;
+  display: flex;
+}
+.stage1bottomleft{
+  width:80rpx;
+  padding-top:0rpx;
+}
+.stage1bottomright{  
+  width:26rpx;
+  height:40rpx;
+  border-bottom:2rpx green solid;
+  border-right:2rpx green solid;
+  margin-top:-20rpx;
+  margin-right:8rpx;
+}
+.stage8{
+  padding-right:0rpx;
+}
+.stage8wrap{
+  height:200rpx;
+  width:110rpx;
+  padding-right:0rpx;
+}
+.stage8top{
+  display: flex;
+  padding-top:0rpx;
+  margin-top:0rpx;
+  margin-bottom:20rpx;
+}
+.stage8bottom{
+  margin-top:0rpx;
+  padding-top:0rpx;
+  margin-bottom:20rpx; 
+  display: flex;
+}
+.stage8topright{
+  width:26rpx;
+  height:40rpx;
+  border-top:2rpx green solid;
+  border-left:2rpx green solid;
+  margin-top:15rpx;
+  margin-bottom:0rpx;
+}
+.stage8bottomright{  
+  width:26rpx;
+  height:40rpx;
+  border-bottom:2rpx green solid;
+  border-left:2rpx green solid;
+  margin-top:-20rpx;
+  margin-left:8rpx;
+}
+.stage8flag{
+  margin-top:0rpx;
+  padding-top:0rpx;
+  margin-left:10rpx;
+  height:30rpx;
+  width:100rpx;
+  
+}
+.stage8name{
+  padding:0rpx 10rpx;
+  margin:0rpx 0rpx;
+  font-size:20rpx;
+  width:100rpx;
+  height:30rpx;
+}
+.stage2wrap{
+  height:300rpx;
+  width:85rpx;
+  margin-bottom:95rpx;   
+}
+.stage2top{
+  display: flex;
+  padding-top:0rpx;
+  margin-top:35rpx;
+  margin-left:0rpx;
+  margin-bottom:20rpx;
+}
+.stage2flagavatar{  
+  padding-top:0rpx;
+  margin-top:0rpx;
+  height:28rpx;
+  width:42rpx;
+  border:2rpx solid  #F2F2F2;
+  background-color: #708090;
+}
+.stage2topright{
+  width:26rpx;
+  height:110rpx;
+  margin-top:15rpx;
+  border-top:2rpx green solid;
+  border-right:2rpx green solid;
+ 
+}
+.stage2topright-line{
+  width:10rpx;
+  height:2rpx;
+  border-bottom:2rpx green solid;
+  margin-top:110rpx;
+}
+.stage2bottom{
+  display: flex;
+  margin-top:0rpx;
+  padding-top:0rpx;
+  margin-bottom:20rpx; 
+}
+.stage2bottflagavatar{
+  padding-top:0rpx;
+  margin-top:55rpx;
+  height:28rpx;
+  width:42rpx;
+  border:2rpx solid  #F2F2F2;
+  background-color: #708090;
+}
+.stage2bottomright{
+  width:26rpx;
+  height:110rpx;
+  margin-top:-40rpx;
+  border-bottom:2rpx green solid;
+  border-right:2rpx green solid;
+}
+.stage7wrap{
+  height:300rpx;
+  width:85rpx;
+  margin-bottom:95rpx; 
+}
+.stage7topleft{
+  width:26rpx;
+  height:110rpx;
+  margin-top:15rpx;
+  border-top:2rpx green solid;
+  border-left:2rpx green solid;
+ 
+}
+.stage7topleft-line{
+  width:10rpx;
+  height:2rpx;
+  border-bottom:2rpx green solid;
+  margin-top:110rpx; 
+}
+.stage7bottomleft{
+  width:26rpx;
+  height:110rpx;
+  margin-left:10rpx;
+  margin-top:-40rpx;  
+  border-bottom:2rpx green solid;
+  border-left:2rpx green solid;
+}
+.stage3wrap{
+  height:500rpx;
+  width:50rpx;  
+  margin-top:100rpx;
+  padding-left:0rpx;
+  margin-left:0rpx; 
+}
+.stage3top{ 
+  width:100%;
+  height:250rpx;  
+}
+.stage3bottom{
+  width:100%;
+  height:250rpx;
+}
+.stage3flagavatar{
+  padding-top:0rpx;
+  margin-top:30rpx;  
+  height:28rpx;
+  width:42rpx;
+  border:2rpx solid  #F2F2F2;
+  background-color: #708090;
+}
+.stage3bottflagavatar{
+  padding-top:0rpx;
+  height:28rpx;
+  width:42rpx;
+  margin-bottom:40rpx;
+  border:2rpx solid  #F2F2F2;
+  background-color: #708090;
+}
+.stage3topline{
+  height:200rpx;
+  width:20rpx;
+  margin-top:-20rpx;
+  margin-left:20rpx;
+  border-left:2rpx solid green;
+  border-bottom:2rpx solid green;
+
+}
+.stage3bottomline{
+  height:175rpx;
+  width:20rpx;
+  margin-top:0rpx;
+  margin-left:20rpx;
+  border-left:2rpx solid green;  
+}
+.stage6topline{
+  height:200rpx;
+  width:20rpx;
+  margin-top:-20rpx;
+ 
+  border-right:2rpx solid green;
+  border-bottom:2rpx solid green;
+
+}
+.stage6bottomline{
+  height:175rpx;
+  width:20rpx;
+  margin-top:0rpx;  
+  border-right:2rpx solid green;  
+}
+.stage4{
+  width:200rpx;
+  height:300rpx;
+  margin-top:150rpx;
+  display: flex;
+}
+.stage4leftflag{
+  height:28rpx;
+  width:42rpx;
+  position: relative;
+  left:0rpx;
+  top:70rpx; 
+  border:2rpx solid  #F2F2F2;
+  background-color: #708090;
+}
+.stage4rightflag{
+  height:28rpx;
+  width:42rpx;
+  position: relative;
+  right:0rpx;
+  top:70rpx;
+  border:2rpx solid  #F2F2F2;
+  background-color: #708090;
+}
+.stage4left{ 
+ width:70rpx;
+ height:20rpx;
+ position: relative;
+ top:70rpx; 
+ border-bottom:2rpx solid  green;
+ border-right:2rpx solid green;
+}
+.stage4right{
+  width:70rpx;
+  height:20rpx;
+  position: relative;
+  top:70rpx;
+  border-bottom:2rpx solid  green;
+  border-left:2rpx solid green;
+}
+.worldcupimg{
+  height:130rpx;
+  width:100rpx;
+  position: relative;
+  left:50rpx;
+  top:-100rpx;
+}
+.champion{
+  width:80rpx;
+  height:80rpx;
+  background-color: #708090;
+  border:2rpx solid #F2F2F2;
+  position: relative;
+  left:60rpx;
+  top:200rpx;
+}
+.championname{
+  font-size:20rpx;
+  text-align: center;
+  width:100rpx;
+  height:20rpx;
+  position: relative;
+  left:50rpx;
+  top:220rpx;
+
+}
