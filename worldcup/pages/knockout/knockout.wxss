@@ -34,10 +34,24 @@
   margin-top:15rpx;
   margin-bottom:0rpx;
 }
+.stage1toprightgreen{
+  width:26rpx;
+  height:40rpx;
+  border-top:2rpx red solid;
+  border-right:2rpx red solid;
+  margin-top:15rpx;
+  margin-bottom:0rpx;
+}
 .stage1topright-line{
   width:10rpx;
   height:2rpx;
   border-bottom:2rpx green solid;
+  margin-top:50rpx;
+}
+.stage1topright-linegreen{
+  width:10rpx;
+  height:2rpx;
+  border-bottom:2rpx red solid;
   margin-top:50rpx;
 }
 .stage1flag{
@@ -55,7 +69,7 @@
   padding-top:0rpx;
   margin-top:0rpx;
   height:28rpx;
-  width:42rpx;
+  width:50rpx;
   border:2rpx solid  #F2F2F2;
 }
 .stage1name{
@@ -80,6 +94,14 @@
   height:40rpx;
   border-bottom:2rpx green solid;
   border-right:2rpx green solid;
+  margin-top:-20rpx;
+  margin-right:8rpx;
+}
+.stage1bottomrightred{  
+  width:26rpx;
+  height:40rpx;
+  border-bottom:2rpx red solid;
+  border-right:2rpx red solid;
   margin-top:-20rpx;
   margin-right:8rpx;
 }
@@ -111,11 +133,27 @@
   margin-top:15rpx;
   margin-bottom:0rpx;
 }
+.stage8toprightred{
+  width:26rpx;
+  height:40rpx;
+  border-top:2rpx red solid;
+  border-left:2rpx red solid;
+  margin-top:15rpx;
+  margin-bottom:0rpx;
+}
 .stage8bottomright{  
   width:26rpx;
   height:40rpx;
   border-bottom:2rpx green solid;
   border-left:2rpx green solid;
+  margin-top:-20rpx;
+  margin-left:8rpx;
+}
+.stage8bottomrightred{  
+  width:26rpx;
+  height:40rpx;
+  border-bottom:2rpx red solid;
+  border-left:2rpx red solid;
   margin-top:-20rpx;
   margin-left:8rpx;
 }
@@ -141,6 +179,8 @@
 }
 .stage2top{
   display: flex;
+  width:80rpx;
+  height:124rpx;
   padding-top:0rpx;
   margin-top:35rpx;
   margin-left:0rpx;
@@ -150,26 +190,42 @@
   padding-top:0rpx;
   margin-top:0rpx;
   height:28rpx;
-  width:42rpx;
+  width:50rpx;
   border:2rpx solid  #F2F2F2;
   background-color: #708090;
 }
 .stage2topright{
-  width:26rpx;
-  height:110rpx;
+  width:23rpx;
+  height:97rpx;
   margin-top:15rpx;
   border-top:2rpx green solid;
   border-right:2rpx green solid;
  
 }
+.stage2toprightred{
+  width:23rpx;
+  height:97rpx;
+  margin-top:15rpx;
+  border-top:2rpx red solid;
+  border-right:2rpx red solid;
+ 
+}
 .stage2topright-line{
-  width:10rpx;
+  width:9rpx;
   height:2rpx;
   border-bottom:2rpx green solid;
   margin-top:110rpx;
 }
+.stage2topright-linered{
+  width:9rpx;
+  height:2rpx;
+  border-bottom:2rpx red solid;
+  margin-top:110rpx;
+}
 .stage2bottom{
   display: flex;
+  width:80rpx;
+  height:125rpx;
   margin-top:0rpx;
   padding-top:0rpx;
   margin-bottom:20rpx; 
@@ -178,16 +234,23 @@
   padding-top:0rpx;
   margin-top:55rpx;
   height:28rpx;
-  width:42rpx;
+  width:50rpx;
   border:2rpx solid  #F2F2F2;
   background-color: #708090;
 }
 .stage2bottomright{
-  width:26rpx;
-  height:110rpx;
-  margin-top:-40rpx;
+  width:19rpx;
+  height:97rpx;
+  margin-top:-29rpx;
   border-bottom:2rpx green solid;
   border-right:2rpx green solid;
+}
+.stage2bottomrightred{
+  width:19rpx;
+  height:97rpx;
+  margin-top:-29rpx;
+  border-bottom:2rpx red solid;
+  border-right:2rpx red solid;
 }
 .stage7wrap{
   height:300rpx;
@@ -196,11 +259,17 @@
 }
 .stage7topleft{
   width:26rpx;
-  height:110rpx;
+  height:100rpx;
   margin-top:15rpx;
   border-top:2rpx green solid;
-  border-left:2rpx green solid;
- 
+  border-left:2rpx green solid; 
+}
+.stage7topleftred{
+  width:26rpx;
+  height:100rpx;
+  margin-top:15rpx;
+  border-top:2rpx red solid;
+  border-left:2rpx red solid; 
 }
 .stage7topleft-line{
   width:10rpx;
@@ -208,13 +277,27 @@
   border-bottom:2rpx green solid;
   margin-top:110rpx; 
 }
+.stage7topleft-linered{
+  width:10rpx;
+  height:2rpx;
+  border-bottom:2rpx red solid;
+  margin-top:110rpx; 
+}
 .stage7bottomleft{
-  width:26rpx;
-  height:110rpx;
-  margin-left:10rpx;
-  margin-top:-40rpx;  
+  width:27rpx;
+  height:97rpx;
+  margin-left:9rpx;
+  margin-top:-30rpx;  
   border-bottom:2rpx green solid;
   border-left:2rpx green solid;
+}
+.stage7bottomleftred{
+  width:27rpx;
+  height:97rpx;
+  margin-left:9rpx;
+  margin-top:-30rpx;  
+  border-bottom:2rpx red solid;
+  border-left:2rpx red solid;
 }
 .stage3wrap{
   height:500rpx;
@@ -235,14 +318,14 @@
   padding-top:0rpx;
   margin-top:30rpx;  
   height:28rpx;
-  width:42rpx;
+  width:50rpx;
   border:2rpx solid  #F2F2F2;
   background-color: #708090;
 }
 .stage3bottflagavatar{
   padding-top:0rpx;
   height:28rpx;
-  width:42rpx;
+  width:50rpx;
   margin-bottom:40rpx;
   border:2rpx solid  #F2F2F2;
   background-color: #708090;
@@ -254,7 +337,14 @@
   margin-left:20rpx;
   border-left:2rpx solid green;
   border-bottom:2rpx solid green;
-
+}
+.stage3toplinered{
+  height:200rpx;
+  width:20rpx;
+  margin-top:-20rpx;
+  margin-left:20rpx;
+  border-left:2rpx solid red;
+  border-bottom:2rpx solid red;  
 }
 .stage3bottomline{
   height:175rpx;
@@ -262,31 +352,55 @@
   margin-top:0rpx;
   margin-left:20rpx;
   border-left:2rpx solid green;  
+  border-top:2rpx solid green;  
+}
+.stage3bottomlinered{
+  height:175rpx;
+  width:20rpx;
+  margin-top:0rpx;
+  margin-left:20rpx;
+  border-left:2rpx solid red;  
+  border-top:2rpx solid red; 
+  z-index: 2;
 }
 .stage6topline{
   height:200rpx;
   width:20rpx;
-  margin-top:-20rpx;
- 
+  margin-top:-20rpx; 
   border-right:2rpx solid green;
   border-bottom:2rpx solid green;
-
+}
+.stage6toplinered{
+  height:200rpx;
+  width:20rpx;
+  margin-top:-20rpx; 
+  border-right:2rpx solid red;
+  border-bottom:2rpx solid red;
+  z-index: 2;
 }
 .stage6bottomline{
   height:175rpx;
   width:20rpx;
   margin-top:0rpx;  
   border-right:2rpx solid green;  
+  border-top:2rpx solid green;
+}
+.stage6bottomlinered{
+  height:175rpx;
+  width:20rpx;
+  margin-top:0rpx;  
+  border-right:2rpx solid red; 
+  border-top:2rpx solid red;
 }
 .stage4{
-  width:200rpx;
+  width:240rpx;
   height:300rpx;
   margin-top:150rpx;
   display: flex;
 }
 .stage4leftflag{
   height:28rpx;
-  width:42rpx;
+  width:50rpx;
   position: relative;
   left:0rpx;
   top:70rpx; 
@@ -295,7 +409,7 @@
 }
 .stage4rightflag{
   height:28rpx;
-  width:42rpx;
+  width:50rpx;
   position: relative;
   right:0rpx;
   top:70rpx;
@@ -303,20 +417,36 @@
   background-color: #708090;
 }
 .stage4left{ 
- width:70rpx;
+ width:60rpx;
  height:20rpx;
  position: relative;
  top:70rpx; 
  border-bottom:2rpx solid  green;
  border-right:2rpx solid green;
 }
+.stage4leftred{ 
+  width:60rpx;
+  height:20rpx;
+  position: relative;
+  top:70rpx; 
+  border-bottom:2rpx solid  red;
+  border-right:2rpx solid red;
+ }
 .stage4right{
-  width:70rpx;
+  width:60rpx;
   height:20rpx;
   position: relative;
   top:70rpx;
   border-bottom:2rpx solid  green;
   border-left:2rpx solid green;
+}
+.stage4rightred{
+  width:60rpx;
+  height:20rpx;
+  position: relative;
+  top:70rpx;
+  border-bottom:2rpx solid  red;
+  border-left:2rpx solid red;
 }
 .worldcupimg{
   height:130rpx;
@@ -326,12 +456,12 @@
   top:-100rpx;
 }
 .champion{
-  width:80rpx;
+  width:120rpx;
   height:80rpx;
   background-color: #708090;
   border:2rpx solid #F2F2F2;
   position: relative;
-  left:60rpx;
+  left:50rpx;
   top:200rpx;
 }
 .championname{
@@ -340,7 +470,7 @@
   width:100rpx;
   height:20rpx;
   position: relative;
-  left:50rpx;
-  top:220rpx;
+  left:60rpx;
+  top:200rpx;
 
 }

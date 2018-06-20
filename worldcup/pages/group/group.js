@@ -47,6 +47,7 @@ Page({
 
   onLoad: function(options) {
     console.log(options)
+    deleteCache('SIXTEEN');
   },
 
   onReady: function() {
@@ -56,6 +57,7 @@ Page({
   },
 
   onShow: function() {
+    deleteCache('SIXTEEN');
     // Do something when page show.
     // console.log('111111   onShow')
   },

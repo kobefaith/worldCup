@@ -165,24 +165,7 @@ Page({
       path: 'pages/group/group'
     }
   },
-  choseTheWiner: function(event) {
-    const flag = event.currentTarget.dataset.flag;
-    const index = event.currentTarget.dataset.index;
-    const stage = event.currentTarget.dataset.stage;
-    let stagearr;
-    const stageindex = Math.floor(index / 2);
-    const stageitem = (index % 2) + 1;
-    let stagedata;
-    if (stage < 4) {
-      stagearr = 'stage' + (stage + 1);
-      stagedata = this.data[ stagearr ];
-      stagedata[ stageindex ][ stageitem ] = flag;
-    } else if (stage > 5) {
-      stagearr = 'stage' + (stage - 1);
-      stagedata = this.data[ stagearr ];
-      stagedata[ stageindex ][ stageitem ] = flag;
-    }
-
+  setStageData: function(stage, stagedata) {
     switch (stage) {
       case 1:
         this.setData({
@@ -227,12 +210,78 @@ Page({
       default:
         break;
     }
+
+  },
+  emptyOldOption: function(old, index, stage) {
+    if (stage === 4) {
+      this.data.stage4[ 0 ][ '1' ] = '';
+      this.setData({
+        stage4: this.data.stage4,
+      });
+      return;
+    }
+    if (stage === 5) {
+      this.data.stage5[ 0 ][ '1' ] = '';
+      this.setData({
+        stage4: this.data.stage5,
+      });
+      return;
+    }
+    let stagearr;
+    const stageindex = Math.floor(index / 2);
+    const stageitem = (index % 2) + 1;
+    let stagedata;
+    if (stage < 4) {
+      stagearr = 'stage' + (stage + 1);
+      stagedata = this.data[ stagearr ];
+      if (stagedata[ stageindex ][ stageitem ] === old) {
+        this.emptyOldOption(old, stageindex, stage + 1);
+        stagedata[ stageindex ][ stageitem ] = '';
+      }
+    } else if (stage > 5) {
+      stagearr = 'stage' + (stage - 1);
+      stagedata = this.data[ stagearr ];
+      if (stagedata[ stageindex ][ stageitem ] === old) {
+        this.emptyOldOption(old, stageindex, stage - 1);
+        stagedata[ stageindex ][ stageitem ] = '';
+      }
+    }
+    this.setStageData(stage, stagedata);
+  },
+  fillTheObj: function(flag, index, stage, old = '') {
+    let stagearr;
+    const stageindex = Math.floor(index / 2);
+    const stageitem = (index % 2) + 1;
+    let stagedata;
+    if (stage < 4) {
+      stagearr = 'stage' + (stage + 1);
+      stagedata = this.data[ stagearr ];
+      if (stagedata[ stageindex ][ stageitem ] !== '' && stagedata[ stageindex ][ stageitem ] !== flag) {
+        this.emptyOldOption(stagedata[ stageindex ][ stageitem ], stageindex, stage + 1)
+      }
+      stagedata[ stageindex ][ stageitem ] = flag;
+    } else if (stage > 5) {
+      stagearr = 'stage' + (stage - 1);
+      stagedata = this.data[ stagearr ];
+      if (stagedata[ stageindex ][ stageitem ] !== '' && stagedata[ stageindex ][ stageitem ] !== flag) {
+        this.emptyOldOption(stagedata[ stageindex ][ stageitem ], stageindex, stage - 1)
+      }
+      stagedata[ stageindex ][ stageitem ] = flag;
+    }
+    this.setStageData(stage, stagedata);
+  },
+  choseTheWiner: function(event) {
+    const flag = event.currentTarget.dataset.flag;
+    const index = event.currentTarget.dataset.index;
+    const stage = event.currentTarget.dataset.stage;
+    this.fillTheObj(flag, index, stage);
+
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+    /*  wx.navigateTo({
+       url: '../logs/logs'
+     }) */
   },
 
   onLoad: function() {
